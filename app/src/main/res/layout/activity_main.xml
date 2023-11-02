@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/cbPizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickCheck"
+        android:text="Pizza"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/cbCheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickCheck"
+        android:text="Cheese"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbPizza"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <RadioGroup
+        android:id="@+id/rgFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onRadioButtonClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbCheese">
+
+        <RadioButton
+            android:onClick="onRadioButtonClick"
+
+            android:id="@+id/rbPizza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pizza" />
+
+        <RadioButton
+            android:onClick="onRadioButtonClick"
+
+            android:id="@+id/rbBurger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Burger" />
+
+        <RadioButton
+            android:onClick="onRadioButtonClick"
+
+            android:id="@+id/rbChicken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chicken" />
+    </RadioGroup>
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgFood"
+        app:layout_constraintVertical_bias="0.27" />
+</androidx.constraintlayout.widget.ConstraintLayout>
